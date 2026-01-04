@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cityToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/countryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cities List"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/searchCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search city..."
+            android:padding="12dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="15dp"/>
+
+        <ListView
+            android:id="@+id/cityListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDDDDD"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+</LinearLayout>

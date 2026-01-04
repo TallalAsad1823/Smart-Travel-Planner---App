@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/popToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#43A047"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <TextView
+                android:id="@+id/popCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City Name"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:layout_marginVertical="20dp"
+                android:background="#43A047" />
+
+            <TextView
+                android:id="@+id/popValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#2E7D32"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/popInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

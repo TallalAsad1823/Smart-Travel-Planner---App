@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "878365287545",
+    "project_id": "otplogin-app-7e3e8",
+    "storage_bucket": "otplogin-app-7e3e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878365287545:android:a1d38d67829c07537da0a8",
+        "android_client_info": {
+          "package_name": "com.example.firebase_otp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbEdmrLE3NCEY6W0Y4rD8rQmL_qDM8X6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878365287545:android:98bdf28e6481c95c7da0a8",
+        "android_client_info": {
+          "package_name": "com.example.smarttravelplanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbEdmrLE3NCEY6W0Y4rD8rQmL_qDM8X6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878365287545:android:260aed881938c2087da0a8",
+        "android_client_info": {
+          "package_name": "com.example.ui_screen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbEdmrLE3NCEY6W0Y4rD8rQmL_qDM8X6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
