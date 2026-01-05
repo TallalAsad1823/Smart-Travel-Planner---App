@@ -47,7 +47,6 @@ public class PlacesActivity extends AppCompatActivity {
     private void loadData() {
         Cursor cursor = dbHelper.getPlacesByCity(selectedCity);
         if (cursor != null && cursor.getCount() > 0) {
-            // Agar Database mein data hai (Offline Mode)
             while (cursor.moveToNext()) {
                 // Column index 2: Name, 3: Description, 4: WebUrl
                 placesList.add(new PlaceModel(cursor.getString(2), cursor.getString(3), cursor.getString(4)));
@@ -56,7 +55,6 @@ public class PlacesActivity extends AppCompatActivity {
             Toast.makeText(this, "Showing Offline Saved Data", Toast.LENGTH_SHORT).show();
             cursor.close();
         } else {
-            // Agar Database khali hai toh Internet se fetch karo
             new FetchPlacesTask().execute(selectedCity);
         }
     }
@@ -90,7 +88,6 @@ public class PlacesActivity extends AppCompatActivity {
                         String snippet = obj.getString("snippet").replaceAll("\\<.*?\\>", "");
                         String link = "https://en.wikipedia.org/wiki/" + title.replace(" ", "_");
 
-                        // SQLite mein Save karna
                         dbHelper.insertPlace(selectedCity, title, snippet, link, "");
                         placesList.add(new PlaceModel(title, snippet, link));
                     }
@@ -104,11 +101,12 @@ public class PlacesActivity extends AppCompatActivity {
         PlacesAdapter adapter = new PlacesAdapter(this, placesList);
         listView.setAdapter(adapter);
 
-        // Click Listener: Nayi logic (Getter method ke sath)
+        // Updated Click Listener with Place Name for Maps logic
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, WebViewActivity.class);
-            // wikiUrl ki jagah getWikiUrl() use kiya hai
             intent.putExtra("url", placesList.get(position).getWikiUrl());
+            // Added place_name to pass it to WebViewActivity for Google Maps Intent
+            intent.putExtra("place_name", placesList.get(position).getName());
             startActivity(intent);
         });
     }
